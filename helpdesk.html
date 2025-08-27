@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Help Desk</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Help Desk Page">
+        <meta name="keywords" content="Help, Support, Issues">
+        <meta name="author" content="Help Desk Team">
+    </head>
+    <body>
+        <p><a href="http://swin.edu.au">
+        <img src ="logo.png" alt="Logo" width="200" height="100"> </a></p>
+        <h1><strong>CWA Help Desk Appointment</strong></h1>
+        <p>The help desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday
+            <br>
+            <br>
+            Check Blackboard for when CWA tutors will be there.
+        </p>
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            <fieldset>
+                <legend>Student details</legend>
+                <p>
+                    <label for="ID" >Student ID</label>
+                    <input type="text" id="ID" name="ID" pattern="^[0-9].{6,9}$" maxlength="10" size="10" required="required">
+                    <br>
+                    <label for="gname">Given Name</label>
+                    <input type="text" id="gname" name="Given Name" pattern="^[a-zA-Z ]+$" maxlength="15" size="15" required="required">
+                    <label for="famname">Family Name</label>
+                    <input type="text" id="famname" name="Family Name" pattern="^[a-zA-Z ]+$" maxlength="15" size="15" required="required">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Your Unit</legend>
+                <p>
+                    <label for="COS10011">COS10011</label>
+                    <input type="radio" id="COS10011" name="Unit" value="COS10011" checked required="required">
+
+                    <label for="COS60004">COS60004</label>
+                    <input type="radio" id="COS60004" name="Unit" value="COS60004" >
+
+                    <label for="COS60008">COS60008</label>
+                    <input type="radio" id="COS60008" name="Unit" value="COS60008" >
+                </p>
+                <p>
+                    <label for="tutor">Your Tutor</label>
+                    <select name="Tutor" id="tutor" required="required">
+                        <option value="">Please Select</option>
+                        <option value="Ms Pawani">Ms Pawani</option>
+                        <option value="Mr Ang">Mr Ang</option>
+                        <option value="Ms Siti">Ms Siti</option>
+                        <option value="Mr Shanmuga">Mr Shanmuga</option>
+                    </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Issue</legend>
+                <p>
+                    <label for="HTML">HTML</label>
+                    <input type="checkbox" name="Issue[]" id="HTML" value="HTML" checked="checked">
+
+                    <label for="CSS">CSS</label>
+                    <input type="checkbox" name="Issue[]" id="CSS" value="CSS">
+
+                    <label for="JavaScript">JavaScript</label>
+                    <input type="checkbox" name="Issue[]" id="JavaScript" value="JavaScript">
+
+                    <label for="PHP">PHP</label>
+                    <input type="checkbox" name="Issue[]" id="PHP" value="PHP">
+
+                    <label for="MySQL">MySQL</label>
+                    <input type="checkbox" name="Issue[]" id="MySQL" value="MySQL">
+                </p>
+                <p>
+                    <label> Description of Issue
+                        <br />
+                        <textarea name="Description" rows="5" cols="40" placeholder="Write description of your problem here..."></textarea>
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Preferred Date/Time</legend>
+                <p>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required="required" placeholder="dd/mm/yyyy" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" min="10:30" max="19:00" required="required" placeholder="00:00" pattern="[0-9]{2}:[0-9]{2}">
+                </p>
+            </fieldset>
+            <input type="submit" value="Book">
+            <input type="reset" value="Reset form">
+        </form>
+    </body>
+</html>
